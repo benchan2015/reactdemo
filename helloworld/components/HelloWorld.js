@@ -13,6 +13,7 @@ export default  class HelloWorld extends React.Component{
     }
 
     render() {
+      console.log(this.props,'ababab')
         return (
            <div  onClick={this.handleClick}>{`Hello World,welcome${this.props.text}`}</div>
         );

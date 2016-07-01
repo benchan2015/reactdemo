@@ -5,7 +5,7 @@ const initialState = {
     text: 'Hello'
 }
 
-export default function helloWorld(state = initialState, action) {
+export default function helloWorld111(state = initialState, action) {
 
     switch (action.type) {
         case 'CHANGE_TEXT':
@@ -18,7 +18,7 @@ export default function helloWorld(state = initialState, action) {
             }
         default:
             return {
-                text: 'Hello'
+                text: 'Hello init data'
             }
     }
 }
