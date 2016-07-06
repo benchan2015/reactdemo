@@ -4,6 +4,7 @@ export default  class HelloWorld extends React.Component{
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        this.changeText = this.changeText.bind(this);
     }
 
     handleClick(){
@@ -11,11 +12,17 @@ export default  class HelloWorld extends React.Component{
       this.props.actions.buttonClick();
         
     }
+    changeText(){
+      this.props.actions.changeText();
+    }
 
     render() {
-      console.log(this.props,'ababab')
+     
         return (
-           <div  onClick={this.handleClick}>{`Hello World,welcome${this.props.text}`}</div>
+            <div>
+              <div  onClick={this.handleClick}>{`${this.props.text}`}</div>
+              <div  onClick={this.changeText}>Just click me to change text</div>
+            </div>
         );
     }
 }

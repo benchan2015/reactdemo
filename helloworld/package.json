@@ -4,7 +4,7 @@
   "description": "this is a react hello world demo",
   "main": "index.js",
   "scripts": {
-    "test": "webpack"
+    "test": "webpack --watch"
   },
   "keywords": [
     "react",

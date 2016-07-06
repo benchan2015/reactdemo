@@ -13,9 +13,7 @@ import HelloWorld from '../components/HelloWorld';
         super(props);
     }
     render() {
-        const { actions, text} = this.props;
-        console.log(text)
-       
+        const { actions, text} = this.props;       
         return (
             <div>
                 <HelloWorld actions={actions} text={text} />
@@ -26,8 +24,8 @@ import HelloWorld from '../components/HelloWorld';
 
 
 function mapStateToProps(state) {
-    console.log('**********',state)
-    return { text: state.a.text }
+   
+    return { text: state.b.text }
 }
 
 

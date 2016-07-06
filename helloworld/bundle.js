@@ -22133,8 +22133,6 @@
 	            var actions = _props.actions;
 	            var text = _props.text;
 	
-	            console.log(text);
-	
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -22147,8 +22145,8 @@
 	}(_react2.default.Component);
 	
 	function mapStateToProps(state) {
-	    console.log('**********', state);
-	    return { text: state.a.text };
+	
+	    return { text: state.b.text };
 	}
 	
 	function mapDispatchToProps(dispatch) {
@@ -22218,6 +22216,7 @@
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(HelloWorld).call(this, props));
 	
 	        _this.handleClick = _this.handleClick.bind(_this);
+	        _this.changeText = _this.changeText.bind(_this);
 	        return _this;
 	    }
 	
@@ -22228,13 +22227,27 @@
 	            this.props.actions.buttonClick();
 	        }
 	    }, {
+	        key: 'changeText',
+	        value: function changeText() {
+	            this.props.actions.changeText();
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            console.log(this.props, 'ababab');
+	
 	            return _react2.default.createElement(
 	                'div',
-	                { onClick: this.handleClick },
-	                'Hello World,welcome' + this.props.text
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { onClick: this.handleClick },
+	                    '' + this.props.text
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { onClick: this.changeText },
+	                    'Just click me to change text'
+	                )
 	            );
 	        }
 	    }]);
@@ -22336,7 +22349,7 @@
 	
 	//将所有reducer打包起来
 	var rootReducer = (0, _redux.combineReducers)({
-	  a: _helloWorld2.default
+	  b: _helloWorld2.default
 	});
 	
 	exports.default = rootReducer;
@@ -22366,7 +22379,7 @@
 	    switch (action.type) {
 	        case 'CHANGE_TEXT':
 	            return {
-	                text: state.text == 'Hello' ? 'Stark' : 'Hello'
+	                text: state.text == 'Kelly' ? 'Andy' : 'Kelly'
 	            };
 	        case 'BUTTON_CLICK':
 	            return {
