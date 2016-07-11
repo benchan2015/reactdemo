@@ -1,0 +1,44 @@
+{
+  "name": "react-helloworld",
+  "version": "1.0.0",
+  "description": "this is a react hello world demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=DEBUG&&node app.js",
+    "build": "set NODE_ENV=PRODUCTION&&webpack --config ./webpack/webpack.config.js"
+  },
+  "keywords": [
+    "react",
+    "hello",
+    "world"
+  ],
+  "author": "ben chan",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "proxy-middleware": "^0.15.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
+    "webpack": "^1.13.1",
+    "webpack-hot-middleware": "^2.12.1",
+    "webpack-isomorphic-tools": "^2.3.2"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
